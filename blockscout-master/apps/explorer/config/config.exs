@@ -4,7 +4,8 @@
 # This configuration file is loaded before any dependency and
 # is restricted to this project.
 import Config
-
+# http://18.141.245.194:8575
+# chainId: 2022
 # General application configuration
 config :explorer,
   ecto_repos: [Explorer.Repo],
@@ -12,7 +13,7 @@ config :explorer,
   coingecko_coin_id: System.get_env("COINGECKO_COIN_ID"),
   token_functions_reader_max_retries: 3,
   allowed_evm_versions:
-    System.get_env("ALLOWED_EVM_VERSIONS") ||
+  System.get_env("ALLOWED_EVM_VERSIONS") ||
       "homestead,tangerineWhistle,spuriousDragon,byzantium,constantinople,petersburg,istanbul,berlin,london,default",
   include_uncles_in_average_block_time:
     if(System.get_env("UNCLES_IN_AVERAGE_BLOCK_TIME") == "true", do: true, else: false),
