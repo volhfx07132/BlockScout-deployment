@@ -1,0 +1,7 @@
+COIN=RIA 
+CHAIN_ID=1993 
+ETHEREUM_JSONRPC_VARIANT=geth 
+ETHEREUM_JSONRPC_HTTP_URL=http://host.docker.internal::8595 
+ETHEREUM_JSONRPC_WS_URL=ws://host.docker.internal::8596 
+ETHEREUM_JSONRPC_TRACE_URL=http://host.docker.internal::8595 
+DISABLE_EXCHANGE_RATES=true make start

@@ -159,17 +159,7 @@ contract PoaNetworkConsensus is IPoaNetworkConsensus {
         emit ChangeFinalized(getValidators());
     }
 
-    function addValidator(address _validator, bool _shouldFireEvent)
-        public
-        onlyKeysManager
-        returns(bool)
-    {
-        if (_addValidatorAllowed(_validator)) {
-            _addValidator(_validator, _shouldFireEvent);
-            return true;
-        }
-        return false;
-    }
+  z
 
     function removeValidator(
         address _validator,
